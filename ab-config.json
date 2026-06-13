@@ -1,0 +1,153 @@
+{
+  "targetUrl": "http://localhost:3000",
+  "figma": {
+    "fileKey": "MOCK_FIGMA_FILE_KEY",
+    "nodeId": "1:42",
+    "token": ""
+  },
+  "sessionCookies": [
+    {
+      "name": "your_session_cookie_name",
+      "value": "your_session_value",
+      "domain": "localhost"
+    }
+  ],
+  "variants": {
+    "control": {
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "control"
+      }
+    },
+    "variant": {
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "variant_a"
+      }
+    }
+  },
+  "baselines": [
+    {
+      "name": "control",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "control"
+      }
+    },
+    {
+      "name": "variant_a",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "variant_a"
+      }
+    },
+    {
+      "name": "variant_b",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "variant_b"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "name": "candidate_control",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "control"
+      }
+    },
+    {
+      "name": "candidate_variant_a",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "variant_a"
+      }
+    },
+    {
+      "name": "candidate_variant_b_broken",
+      "url": "http://localhost:3000",
+      "cookie": {
+        "name": "ab_variant",
+        "value": "variant_b_broken"
+      }
+    }
+  ],
+  "visual": {
+    "browsers": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "viewports": [
+      { "width": 1280, "height": 800, "name": "desktop" },
+      { "width": 768, "height": 1024, "name": "tablet" },
+      { "width": 375, "height": 667, "name": "mobile" }
+    ],
+    "selectors": [
+      "body",
+      ".cta-button-container"
+    ],
+    "mismatchThreshold": 0.01
+  },
+  "tracing": {
+    "simulationSteps": [
+      {
+        "name": "Landing Page View",
+        "action": "navigate",
+        "expectedTelemetry": {
+          "urlPattern": "/api/telemetry",
+          "payload": {
+            "type": "pageview"
+          }
+        }
+      },
+      {
+        "name": "Input Demo Username",
+        "action": "type",
+        "selector": "#username-input-placeholder",
+        "value": "guest_user"
+      },
+      {
+        "name": "Input Demo Password",
+        "action": "type",
+        "selector": "#password-input-placeholder",
+        "value": "guest_password"
+      },
+      {
+        "name": "Click Primary CTA",
+        "action": "click",
+        "selector": ".cta-button",
+        "expectedTelemetry": {
+          "urlPattern": "/api/telemetry",
+          "payload": {
+            "type": "conversion",
+            "goal": "cta_click"
+          }
+        }
+      }
+    ]
+  },
+  "simulation": {
+    "sampleSize": 2500,
+    "scenarios": [
+      {
+        "name": "Variant A - Successful Improvement",
+        "controlTrueRate": 0.12,
+        "variantTrueRate": 0.156
+      },
+      {
+        "name": "Variant A - Underperformance (Auto-Halt)",
+        "controlTrueRate": 0.12,
+        "variantTrueRate": 0.084
+      }
+    ]
+  }
+}

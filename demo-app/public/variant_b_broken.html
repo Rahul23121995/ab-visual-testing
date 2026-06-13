@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Premium Checkout (Enterprise - Broken)</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="checkout-card enterprise-theme" style="padding-top: 5rem; overflow: visible;">
+      <!-- Visual bug: Header alignment shifted and font-size blown up -->
+      <div class="header" style="margin-bottom: 5rem; transform: rotate(-3deg);">
+        <h1 style="font-size: 3rem; color: #ef4444;">Enterprise Premium!!!</h1>
+        <p style="margin-left: -50px; font-weight: bold;">Start scale automation and statistical modeling today</p>
+      </div>
+
+      <!-- Visual bug: Pricing box layout broken and shifted -->
+      <div class="product-info" style="position: relative; padding-bottom: 3rem;">
+        <div class="product-name">
+          <h3>Enterprise Plan</h3>
+          <p>Unlimited visual baselines, custom telemetry, statistical modeling</p>
+        </div>
+        <div class="product-price" style="font-size: 4rem; color: #f59e0b; position: absolute; right: -20px; top: 20px;">$49/mo</div>
+      </div>
+
+      <!-- Visual bug: Feature list items misaligned and overlapping -->
+      <div class="features-list" style="margin-top: 2rem;">
+        <div class="feature-item" style="padding-left: 4rem;">
+          <div class="feature-icon" style="transform: scale(2);">✗</div>
+          <span>Multiple visual baseline variations</span>
+        </div>
+        <div class="feature-item" style="opacity: 0.3;">
+          <div class="feature-icon">✓</div>
+          <span>Automatic event and goal validation</span>
+        </div>
+        <div class="feature-item" style="margin-bottom: -20px;">
+          <div class="feature-icon">✓</div>
+          <span>Z-test proportions statistical engine</span>
+        </div>
+      </div>
+
+      <!-- Visual bug: Inputs are misaligned and styled incorrectly -->
+      <div class="input-group" style="margin-bottom: 2.5rem; margin-left: -40px; display: flex; flex-direction: column; gap: 1rem; text-align: left; transform: rotate(1deg);">
+        <label for="username-input-placeholder" style="font-size: 1.25rem; color: #ef4444;">Username</label>
+        <input type="text" id="username-input-placeholder" placeholder="Broken username..." style="padding: 0.2rem; border-radius: 0; border: 3px solid yellow; background: red; color: white; outline: none;" />
+        <label for="password-input-placeholder" style="font-size: 1.25rem; color: #ef4444; margin-top: 1rem;">Password</label>
+        <input type="password" id="password-input-placeholder" placeholder="Broken password..." style="padding: 0.2rem; border-radius: 0; border: 3px solid yellow; background: red; color: white; outline: none;" />
+      </div>
+
+      <!-- Visual bug: CTA button with ugly colors and incorrect height -->
+      <div class="cta-button-container" style="margin-top: 3rem;">
+        <button class="cta-button" style="background: yellow; color: black; border: 4px dashed red; border-radius: 0; padding: 0.2rem; font-size: 0.8rem;">
+          Subscribe to Enterprise Plan ✨
+        </button>
+      </div>
+
+      <div class="footer-text" style="color: red; font-weight: 800;">
+        Variant: ENTERPRISE (BROKEN DEPLOYMENT) • Secured Checkout
+      </div>
+    </div>
+  </div>
+  
+  <script src="tracking.js"></script>
+</body>
+</html>

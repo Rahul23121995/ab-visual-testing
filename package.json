@@ -1,0 +1,17 @@
+{
+  "name": "ab-testing-verifier",
+  "version": "1.0.0",
+  "description": "Automated verification suite for A/B testing: Percy-style visual diff, telemetry event tracing, and statistical reporting",
+  "main": "ab-verify.js",
+  "type": "module",
+  "scripts": {
+    "start": "node demo-server.js",
+    "verify": "node ab-verify.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "pixelmatch": "^6.0.0",
+    "pngjs": "^7.0.0",
+    "playwright": "^1.49.1"
+  }
+}
