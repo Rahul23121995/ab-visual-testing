@@ -1,7 +1,7 @@
 {
   "name": "ab-testing-verifier",
   "version": "1.0.0",
-  "description": "Automated verification suite for A/B testing: Percy-style visual diff, telemetry event tracing, and statistical reporting",
+  "description": "Automated verification suite for A/B testing: local visual regression, telemetry event tracing, and statistical reporting",
   "main": "ab-verify.js",
   "type": "module",
   "scripts": {

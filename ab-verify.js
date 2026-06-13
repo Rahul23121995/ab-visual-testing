@@ -20,8 +20,8 @@ async function main() {
   const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
   try {
-    // 1. Visual Verification (Percy-style layout diff)
-    console.log(`--- [Step 1/4] Running Percy-Style Visual Comparison ---`);
+    // 1. Visual Verification (Multi-baseline layout diff)
+    console.log(`--- [Step 1/4] Running Multi-Baseline Visual Comparison ---`);
     const visualResults = await runVisualRegression(config);
 
     // 1b. Figma-to-Code Design Specification Matcher

@@ -14,7 +14,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
 
   const reportPath = path.join(outputDir, 'ab-experiment-report.html');
 
-  // Format visual result rows with interactive Percy-style review toolbars
+  // Format visual result rows with interactive visual regression review toolbars
   const visualCards = visualResults.map((res, idx) => {
     const browserName = res.browser || 'chromium';
     const cardIdStr = `${res.viewport}_${browserName}_${res.candidateName.replace(/\s+/g, '_')}`;
@@ -71,7 +71,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -88,7 +88,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-${cardIdStr}">
+        <div class="visual-view-panel active" id="panel-slider-${cardIdStr}">
           <div class="swipe-container" id="swipe-container-${cardIdStr}">
             <!-- Selected Baseline Image (Before) -->
             <img src="${bestComp.baselineFile}" class="swipe-base" alt="Baseline Base" />
@@ -110,7 +110,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-${cardIdStr}">
+        <div class="visual-view-panel" id="panel-toggle-${cardIdStr}">
           <div class="toggle-viewer" id="toggle-viewer-${cardIdStr}">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -140,7 +140,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-${cardIdStr}">
+        <div class="visual-view-panel" id="panel-grid-${cardIdStr}">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -553,7 +553,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
       box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
     }
 
-    /* Percy Workspace Controls */
+    /* Visual Workspace Controls */
     .workspace-tabs-container {
       display: flex;
       align-items: center;
@@ -594,11 +594,11 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
       color: var(--text-primary);
     }
     
-    .percy-view-panel {
+    .visual-view-panel {
       display: none;
     }
     
-    .percy-view-panel.active {
+    .visual-view-panel.active {
       display: block;
     }
     
@@ -1066,10 +1066,10 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
         display: none !important;
       }
       /* Force display side-by-side grid of visual comparisons */
-      .percy-view-panel {
+      .visual-view-panel {
         display: none !important;
       }
-      .percy-view-panel[id^="panel-grid-"] {
+      .visual-view-panel[id^="panel-grid-"] {
         display: block !important;
       }
       .image-grid {
@@ -1125,7 +1125,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
     <header>
       <div>
         <h1>A/B Verification & Automation Audit</h1>
-        <p>Percy-Style Visual Comparison, Goal Interception & Statistical Modeling Report</p>
+        <p>Visual Regression Comparison, Goal Interception & Statistical Modeling Report</p>
       </div>
       <div class="meta-box">
         Target URL: <strong>${config.targetUrl}</strong><br />
@@ -1136,7 +1136,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
     <!-- SECTION 1: VISUAL VERIFICATION -->
     <section class="card">
       <div class="card-header">
-        <h2>1. Percy-Style Visual Comparison</h2>
+        <h2>1. Visual Regression Comparison</h2>
         <span class="badge badge-neutral">Layout Tests</span>
       </div>
       ${visualCards}
@@ -1305,7 +1305,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
       btn.classList.add('active');
       
       // Hide all panels in this card
-      parentCard.querySelectorAll('.percy-view-panel').forEach(panel => {
+      parentCard.querySelectorAll('.visual-view-panel').forEach(panel => {
         panel.classList.remove('active');
       });
       
@@ -1429,7 +1429,7 @@ export function generateHTMLReport(config, visualResults, tracerResults, statsSc
     document.addEventListener('keydown', (e) => {
       // Toggle mode quick toggling
       if (e.key === ' ' || e.key === 'Tab') {
-        const activePanel = document.querySelector('.percy-view-panel.active[id^="panel-toggle-"]');
+        const activePanel = document.querySelector('.visual-view-panel.active[id^="panel-toggle-"]');
         if (activePanel) {
           e.preventDefault();
           const buttons = Array.from(activePanel.querySelectorAll('.toggle-btn'));

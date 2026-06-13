@@ -248,7 +248,7 @@
       box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
     }
 
-    /* Percy Workspace Controls */
+    /* Visual Workspace Controls */
     .workspace-tabs-container {
       display: flex;
       align-items: center;
@@ -289,11 +289,11 @@
       color: var(--text-primary);
     }
     
-    .percy-view-panel {
+    .visual-view-panel {
       display: none;
     }
     
-    .percy-view-panel.active {
+    .visual-view-panel.active {
       display: block;
     }
     
@@ -761,10 +761,10 @@
         display: none !important;
       }
       /* Force display side-by-side grid of visual comparisons */
-      .percy-view-panel {
+      .visual-view-panel {
         display: none !important;
       }
-      .percy-view-panel[id^="panel-grid-"] {
+      .visual-view-panel[id^="panel-grid-"] {
         display: block !important;
       }
       .image-grid {
@@ -820,18 +820,18 @@
     <header>
       <div>
         <h1>A/B Verification & Automation Audit</h1>
-        <p>Percy-Style Visual Comparison, Goal Interception & Statistical Modeling Report</p>
+        <p>Visual Regression Comparison, Goal Interception & Statistical Modeling Report</p>
       </div>
       <div class="meta-box">
         Target URL: <strong>http://localhost:3000</strong><br />
-        Generated: <strong>13/6/2026, 6:16:42 pm</strong>
+        Generated: <strong>13/6/2026, 7:04:47 pm</strong>
       </div>
     </header>
 
     <!-- SECTION 1: VISUAL VERIFICATION -->
     <section class="card">
       <div class="card-header">
-        <h2>1. Percy-Style Visual Comparison</h2>
+        <h2>1. Visual Regression Comparison</h2>
         <span class="badge badge-neutral">Layout Tests</span>
       </div>
       
@@ -872,10 +872,10 @@
                 data-baseline="visual/desktop_chromium_baseline_variant_a.png" 
                 data-diff="visual/desktop_chromium_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_control.png"
-                data-mismatch="4.43"
-                data-pixels="45365"
+                data-mismatch="4.44"
+                data-pixels="45486"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.43%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.44%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -883,16 +883,16 @@
                 data-baseline="visual/desktop_chromium_baseline_variant_b.png" 
                 data-diff="visual/desktop_chromium_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_control.png"
-                data-mismatch="4.45"
-                data-pixels="45521"
+                data-mismatch="4.44"
+                data-pixels="45516"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.45%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.44%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -909,7 +909,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_chromium_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-desktop_chromium_candidate_control">
           <div class="swipe-container" id="swipe-container-desktop_chromium_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_chromium_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -931,7 +931,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-desktop_chromium_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-desktop_chromium_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -961,7 +961,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-desktop_chromium_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1023,10 +1023,10 @@
                 data-baseline="visual/tablet_chromium_baseline_variant_a.png" 
                 data-diff="visual/tablet_chromium_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_control.png"
-                data-mismatch="5.77"
-                data-pixels="45365"
+                data-mismatch="5.78"
+                data-pixels="45486"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.77%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.78%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -1035,7 +1035,7 @@
                 data-diff="visual/tablet_chromium_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_control.png"
                 data-mismatch="5.79"
-                data-pixels="45521"
+                data-pixels="45516"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.79%)</span>
         </button>
@@ -1043,7 +1043,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1060,7 +1060,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_chromium_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-tablet_chromium_candidate_control">
           <div class="swipe-container" id="swipe-container-tablet_chromium_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_chromium_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -1082,7 +1082,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-tablet_chromium_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-tablet_chromium_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1112,7 +1112,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-tablet_chromium_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1185,16 +1185,16 @@
                 data-baseline="visual/mobile_chromium_baseline_variant_b.png" 
                 data-diff="visual/mobile_chromium_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_chromium_candidate_candidate_control.png"
-                data-mismatch="14.41"
-                data-pixels="52902"
+                data-mismatch="14.44"
+                data-pixels="53009"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 14.41%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 14.44%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1211,7 +1211,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_chromium_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-mobile_chromium_candidate_control">
           <div class="swipe-container" id="swipe-container-mobile_chromium_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_chromium_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -1233,7 +1233,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-mobile_chromium_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-mobile_chromium_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1263,7 +1263,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_chromium_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-mobile_chromium_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1314,10 +1314,10 @@
                 data-baseline="visual/desktop_chromium_baseline_control.png" 
                 data-diff="visual/desktop_chromium_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_variant_a.png"
-                data-mismatch="4.43"
-                data-pixels="45365"
+                data-mismatch="4.44"
+                data-pixels="45486"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.43%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.44%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -1337,7 +1337,7 @@
                 data-diff="visual/desktop_chromium_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_variant_a.png"
                 data-mismatch="4"
-                data-pixels="41003"
+                data-pixels="41008"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4%)</span>
         </button>
@@ -1345,7 +1345,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1362,7 +1362,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_chromium_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-desktop_chromium_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-desktop_chromium_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_chromium_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -1384,7 +1384,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-desktop_chromium_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-desktop_chromium_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1414,7 +1414,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-desktop_chromium_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1465,10 +1465,10 @@
                 data-baseline="visual/tablet_chromium_baseline_control.png" 
                 data-diff="visual/tablet_chromium_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_variant_a.png"
-                data-mismatch="5.77"
-                data-pixels="45365"
+                data-mismatch="5.78"
+                data-pixels="45486"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.77%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.78%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -1488,7 +1488,7 @@
                 data-diff="visual/tablet_chromium_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_variant_a.png"
                 data-mismatch="5.21"
-                data-pixels="41003"
+                data-pixels="41008"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.21%)</span>
         </button>
@@ -1496,7 +1496,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1513,7 +1513,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_chromium_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-tablet_chromium_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-tablet_chromium_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_chromium_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -1535,7 +1535,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-tablet_chromium_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-tablet_chromium_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1565,7 +1565,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-tablet_chromium_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1638,16 +1638,16 @@
                 data-baseline="visual/mobile_chromium_baseline_variant_b.png" 
                 data-diff="visual/mobile_chromium_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_chromium_candidate_candidate_variant_a.png"
-                data-mismatch="11.9"
-                data-pixels="43679"
+                data-mismatch="11.93"
+                data-pixels="43786"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 11.9%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 11.93%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1664,7 +1664,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_chromium_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-mobile_chromium_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-mobile_chromium_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_chromium_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -1686,7 +1686,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-mobile_chromium_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-mobile_chromium_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1716,7 +1716,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_chromium_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-mobile_chromium_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1754,7 +1754,7 @@
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
           <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">20.22%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">236790 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">236865 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -1768,7 +1768,7 @@
                 data-diff="visual/desktop_chromium_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_variant_b_broken.png"
                 data-mismatch="20.22"
-                data-pixels="236790"
+                data-pixels="236865"
                 data-status="FAILED">
           CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 20.22%)</span>
         </button>
@@ -1778,10 +1778,10 @@
                 data-baseline="visual/desktop_chromium_baseline_variant_a.png" 
                 data-diff="visual/desktop_chromium_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_chromium_candidate_candidate_variant_b_broken.png"
-                data-mismatch="20.44"
-                data-pixels="239402"
+                data-mismatch="20.45"
+                data-pixels="239494"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 20.44%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 20.45%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -1798,7 +1798,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1815,7 +1815,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-desktop_chromium_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-desktop_chromium_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_chromium_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -1837,7 +1837,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-desktop_chromium_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-desktop_chromium_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -1867,7 +1867,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-desktop_chromium_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -1903,9 +1903,9 @@
         
         <div class="stats-mini">
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
-          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">10.54%</strong></span>
+          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">10.56%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">82920 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">83013 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -1918,10 +1918,10 @@
                 data-baseline="visual/tablet_chromium_baseline_control.png" 
                 data-diff="visual/tablet_chromium_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_variant_b_broken.png"
-                data-mismatch="10.54"
-                data-pixels="82920"
+                data-mismatch="10.56"
+                data-pixels="83013"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.54%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.56%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -1929,10 +1929,10 @@
                 data-baseline="visual/tablet_chromium_baseline_variant_a.png" 
                 data-diff="visual/tablet_chromium_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_chromium_candidate_candidate_variant_b_broken.png"
-                data-mismatch="10.85"
-                data-pixels="85323"
+                data-mismatch="10.86"
+                data-pixels="85416"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.85%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.86%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -1949,7 +1949,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -1966,7 +1966,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-tablet_chromium_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-tablet_chromium_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_chromium_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -1988,7 +1988,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-tablet_chromium_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-tablet_chromium_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2018,7 +2018,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-tablet_chromium_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2054,9 +2054,9 @@
         
         <div class="stats-mini">
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">variant_a</strong></span>
-          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">25.43%</strong></span>
+          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">25.45%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">106596 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">106693 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -2069,10 +2069,10 @@
                 data-baseline="visual/mobile_chromium_baseline_control.png" 
                 data-diff="visual/mobile_chromium_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/mobile_chromium_candidate_candidate_variant_b_broken.png"
-                data-mismatch="25.97"
-                data-pixels="108862"
+                data-mismatch="25.99"
+                data-pixels="108959"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.97%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.99%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -2080,10 +2080,10 @@
                 data-baseline="visual/mobile_chromium_baseline_variant_a.png" 
                 data-diff="visual/mobile_chromium_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/mobile_chromium_candidate_candidate_variant_b_broken.png"
-                data-mismatch="25.43"
-                data-pixels="106596"
+                data-mismatch="25.45"
+                data-pixels="106693"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.43%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.45%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -2100,7 +2100,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2117,7 +2117,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-mobile_chromium_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-mobile_chromium_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_chromium_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -2139,7 +2139,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-mobile_chromium_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-mobile_chromium_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2169,7 +2169,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_chromium_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-mobile_chromium_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2231,10 +2231,10 @@
                 data-baseline="visual/desktop_firefox_baseline_variant_a.png" 
                 data-diff="visual/desktop_firefox_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_control.png"
-                data-mismatch="4.62"
-                data-pixels="47307"
+                data-mismatch="4.63"
+                data-pixels="47384"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.62%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.63%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -2243,7 +2243,7 @@
                 data-diff="visual/desktop_firefox_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_control.png"
                 data-mismatch="4.47"
-                data-pixels="45760"
+                data-pixels="45758"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.47%)</span>
         </button>
@@ -2251,7 +2251,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2268,7 +2268,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_firefox_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-desktop_firefox_candidate_control">
           <div class="swipe-container" id="swipe-container-desktop_firefox_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_firefox_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -2290,7 +2290,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-desktop_firefox_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-desktop_firefox_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2320,7 +2320,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-desktop_firefox_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2382,10 +2382,10 @@
                 data-baseline="visual/tablet_firefox_baseline_variant_a.png" 
                 data-diff="visual/tablet_firefox_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_control.png"
-                data-mismatch="6.02"
-                data-pixels="47307"
+                data-mismatch="6.03"
+                data-pixels="47384"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 6.02%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 6.03%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -2394,7 +2394,7 @@
                 data-diff="visual/tablet_firefox_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_control.png"
                 data-mismatch="5.82"
-                data-pixels="45761"
+                data-pixels="45759"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.82%)</span>
         </button>
@@ -2402,7 +2402,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2419,7 +2419,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_firefox_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-tablet_firefox_candidate_control">
           <div class="swipe-container" id="swipe-container-tablet_firefox_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_firefox_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -2441,7 +2441,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-tablet_firefox_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-tablet_firefox_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2471,7 +2471,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-tablet_firefox_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2544,16 +2544,16 @@
                 data-baseline="visual/mobile_firefox_baseline_variant_b.png" 
                 data-diff="visual/mobile_firefox_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_firefox_candidate_candidate_control.png"
-                data-mismatch="12.2"
-                data-pixels="43870"
+                data-mismatch="12.22"
+                data-pixels="43962"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 12.2%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 12.22%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2570,7 +2570,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_firefox_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-mobile_firefox_candidate_control">
           <div class="swipe-container" id="swipe-container-mobile_firefox_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_firefox_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -2592,7 +2592,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-mobile_firefox_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-mobile_firefox_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2622,7 +2622,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_firefox_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-mobile_firefox_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2673,10 +2673,10 @@
                 data-baseline="visual/desktop_firefox_baseline_control.png" 
                 data-diff="visual/desktop_firefox_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_variant_a.png"
-                data-mismatch="4.62"
-                data-pixels="47307"
+                data-mismatch="4.63"
+                data-pixels="47384"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.62%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.63%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -2696,7 +2696,7 @@
                 data-diff="visual/desktop_firefox_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_variant_a.png"
                 data-mismatch="4.22"
-                data-pixels="43228"
+                data-pixels="43195"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.22%)</span>
         </button>
@@ -2704,7 +2704,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2721,7 +2721,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_firefox_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-desktop_firefox_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-desktop_firefox_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_firefox_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -2743,7 +2743,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-desktop_firefox_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-desktop_firefox_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2773,7 +2773,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-desktop_firefox_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2824,10 +2824,10 @@
                 data-baseline="visual/tablet_firefox_baseline_control.png" 
                 data-diff="visual/tablet_firefox_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_variant_a.png"
-                data-mismatch="6.02"
-                data-pixels="47307"
+                data-mismatch="6.03"
+                data-pixels="47384"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 6.02%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 6.03%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -2846,16 +2846,16 @@
                 data-baseline="visual/tablet_firefox_baseline_variant_b.png" 
                 data-diff="visual/tablet_firefox_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_variant_a.png"
-                data-mismatch="5.5"
-                data-pixels="43228"
+                data-mismatch="5.49"
+                data-pixels="43195"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.5%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.49%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -2872,7 +2872,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_firefox_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-tablet_firefox_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-tablet_firefox_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_firefox_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -2894,7 +2894,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-tablet_firefox_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-tablet_firefox_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -2924,7 +2924,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-tablet_firefox_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -2997,16 +2997,16 @@
                 data-baseline="visual/mobile_firefox_baseline_variant_b.png" 
                 data-diff="visual/mobile_firefox_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_firefox_candidate_candidate_variant_a.png"
-                data-mismatch="8.81"
-                data-pixels="31687"
+                data-mismatch="8.84"
+                data-pixels="31779"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 8.81%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 8.84%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3023,7 +3023,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_firefox_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-mobile_firefox_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-mobile_firefox_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_firefox_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -3045,7 +3045,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-mobile_firefox_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-mobile_firefox_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3075,7 +3075,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_firefox_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-mobile_firefox_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3113,7 +3113,7 @@
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
           <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">20.42%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">239653 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">239687 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -3127,7 +3127,7 @@
                 data-diff="visual/desktop_firefox_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_variant_b_broken.png"
                 data-mismatch="20.42"
-                data-pixels="239653"
+                data-pixels="239687"
                 data-status="FAILED">
           CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 20.42%)</span>
         </button>
@@ -3138,7 +3138,7 @@
                 data-diff="visual/desktop_firefox_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_firefox_candidate_candidate_variant_b_broken.png"
                 data-mismatch="20.89"
-                data-pixels="245163"
+                data-pixels="245220"
                 data-status="FAILED">
           VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 20.89%)</span>
         </button>
@@ -3157,7 +3157,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3174,7 +3174,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-desktop_firefox_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-desktop_firefox_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_firefox_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -3196,7 +3196,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-desktop_firefox_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-desktop_firefox_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3226,7 +3226,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-desktop_firefox_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3262,9 +3262,9 @@
         
         <div class="stats-mini">
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
-          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">10.77%</strong></span>
+          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">10.78%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">84671 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">84741 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -3277,10 +3277,10 @@
                 data-baseline="visual/tablet_firefox_baseline_control.png" 
                 data-diff="visual/tablet_firefox_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_variant_b_broken.png"
-                data-mismatch="10.77"
-                data-pixels="84671"
+                data-mismatch="10.78"
+                data-pixels="84741"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.77%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.78%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -3288,10 +3288,10 @@
                 data-baseline="visual/tablet_firefox_baseline_variant_a.png" 
                 data-diff="visual/tablet_firefox_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_firefox_candidate_candidate_variant_b_broken.png"
-                data-mismatch="11.27"
-                data-pixels="88654"
+                data-mismatch="11.28"
+                data-pixels="88724"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 11.27%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 11.28%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -3308,7 +3308,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3325,7 +3325,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-tablet_firefox_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-tablet_firefox_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_firefox_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -3347,7 +3347,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-tablet_firefox_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-tablet_firefox_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3377,7 +3377,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-tablet_firefox_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3428,10 +3428,10 @@
                 data-baseline="visual/mobile_firefox_baseline_control.png" 
                 data-diff="visual/mobile_firefox_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/mobile_firefox_candidate_candidate_variant_b_broken.png"
-                data-mismatch="26.68"
-                data-pixels="112066"
+                data-mismatch="26.7"
+                data-pixels="112148"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 26.68%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 26.7%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -3439,10 +3439,10 @@
                 data-baseline="visual/mobile_firefox_baseline_variant_a.png" 
                 data-diff="visual/mobile_firefox_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/mobile_firefox_candidate_candidate_variant_b_broken.png"
-                data-mismatch="25.96"
-                data-pixels="109048"
+                data-mismatch="25.98"
+                data-pixels="109130"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.96%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 25.98%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -3459,7 +3459,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3476,7 +3476,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-mobile_firefox_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-mobile_firefox_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_firefox_baseline_variant_b.png" class="swipe-base" alt="Baseline Base" />
@@ -3498,7 +3498,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-mobile_firefox_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-mobile_firefox_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3528,7 +3528,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_firefox_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-mobile_firefox_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3590,10 +3590,10 @@
                 data-baseline="visual/desktop_webkit_baseline_variant_a.png" 
                 data-diff="visual/desktop_webkit_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_control.png"
-                data-mismatch="4.16"
-                data-pixels="42617"
+                data-mismatch="4.17"
+                data-pixels="42740"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.16%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.17%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -3602,7 +3602,7 @@
                 data-diff="visual/desktop_webkit_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_control.png"
                 data-mismatch="4.04"
-                data-pixels="41403"
+                data-pixels="41419"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.04%)</span>
         </button>
@@ -3610,7 +3610,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3627,7 +3627,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_webkit_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-desktop_webkit_candidate_control">
           <div class="swipe-container" id="swipe-container-desktop_webkit_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_webkit_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -3649,7 +3649,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-desktop_webkit_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-desktop_webkit_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3679,7 +3679,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-desktop_webkit_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3741,10 +3741,10 @@
                 data-baseline="visual/tablet_webkit_baseline_variant_a.png" 
                 data-diff="visual/tablet_webkit_candidate_candidate_control_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_control.png"
-                data-mismatch="5.42"
-                data-pixels="42617"
+                data-mismatch="5.43"
+                data-pixels="42740"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.42%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.43%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -3752,16 +3752,16 @@
                 data-baseline="visual/tablet_webkit_baseline_variant_b.png" 
                 data-diff="visual/tablet_webkit_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_control.png"
-                data-mismatch="5.26"
-                data-pixels="41403"
+                data-mismatch="5.27"
+                data-pixels="41419"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.26%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.27%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3778,7 +3778,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_webkit_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-tablet_webkit_candidate_control">
           <div class="swipe-container" id="swipe-container-tablet_webkit_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_webkit_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -3800,7 +3800,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-tablet_webkit_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-tablet_webkit_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3830,7 +3830,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-tablet_webkit_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -3903,16 +3903,16 @@
                 data-baseline="visual/mobile_webkit_baseline_variant_b.png" 
                 data-diff="visual/mobile_webkit_candidate_candidate_control_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_webkit_candidate_candidate_control.png"
-                data-mismatch="12.92"
-                data-pixels="47491"
+                data-mismatch="12.93"
+                data-pixels="47519"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 12.92%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 12.93%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -3929,7 +3929,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_webkit_candidate_control">
+        <div class="visual-view-panel active" id="panel-slider-mobile_webkit_candidate_control">
           <div class="swipe-container" id="swipe-container-mobile_webkit_candidate_control">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_webkit_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -3951,7 +3951,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-toggle-mobile_webkit_candidate_control">
           <div class="toggle-viewer" id="toggle-viewer-mobile_webkit_candidate_control">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -3981,7 +3981,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_webkit_candidate_control">
+        <div class="visual-view-panel" id="panel-grid-mobile_webkit_candidate_control">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4032,10 +4032,10 @@
                 data-baseline="visual/desktop_webkit_baseline_control.png" 
                 data-diff="visual/desktop_webkit_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_variant_a.png"
-                data-mismatch="4.16"
-                data-pixels="42617"
+                data-mismatch="4.17"
+                data-pixels="42740"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.16%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.17%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -4054,16 +4054,16 @@
                 data-baseline="visual/desktop_webkit_baseline_variant_b.png" 
                 data-diff="visual/desktop_webkit_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_variant_a.png"
-                data-mismatch="3.81"
-                data-pixels="38965"
+                data-mismatch="3.8"
+                data-pixels="38933"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 3.81%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 3.8%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4080,7 +4080,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_webkit_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-desktop_webkit_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-desktop_webkit_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_webkit_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -4102,7 +4102,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-desktop_webkit_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-desktop_webkit_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4132,7 +4132,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-desktop_webkit_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4183,10 +4183,10 @@
                 data-baseline="visual/tablet_webkit_baseline_control.png" 
                 data-diff="visual/tablet_webkit_candidate_candidate_variant_a_diff_vs_control.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_variant_a.png"
-                data-mismatch="5.42"
-                data-pixels="42617"
+                data-mismatch="5.43"
+                data-pixels="42740"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.42%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 5.43%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -4206,7 +4206,7 @@
                 data-diff="visual/tablet_webkit_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_variant_a.png"
                 data-mismatch="4.95"
-                data-pixels="38965"
+                data-pixels="38933"
                 data-status="FAILED">
           VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 4.95%)</span>
         </button>
@@ -4214,7 +4214,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4231,7 +4231,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_webkit_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-tablet_webkit_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-tablet_webkit_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_webkit_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -4253,7 +4253,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-tablet_webkit_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-tablet_webkit_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4283,7 +4283,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-tablet_webkit_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4356,16 +4356,16 @@
                 data-baseline="visual/mobile_webkit_baseline_variant_b.png" 
                 data-diff="visual/mobile_webkit_candidate_candidate_variant_a_diff_vs_variant_b.png"
                 data-candidate="visual/mobile_webkit_candidate_candidate_variant_a.png"
-                data-mismatch="10.16"
-                data-pixels="37339"
+                data-mismatch="10.17"
+                data-pixels="37367"
                 data-status="FAILED">
-          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.16%)</span>
+          VARIANT_B <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 10.17%)</span>
         </button>
       
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4382,7 +4382,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_webkit_candidate_variant_a">
+        <div class="visual-view-panel active" id="panel-slider-mobile_webkit_candidate_variant_a">
           <div class="swipe-container" id="swipe-container-mobile_webkit_candidate_variant_a">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_webkit_baseline_variant_a.png" class="swipe-base" alt="Baseline Base" />
@@ -4404,7 +4404,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-toggle-mobile_webkit_candidate_variant_a">
           <div class="toggle-viewer" id="toggle-viewer-mobile_webkit_candidate_variant_a">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4434,7 +4434,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_webkit_candidate_variant_a">
+        <div class="visual-view-panel" id="panel-grid-mobile_webkit_candidate_variant_a">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4470,9 +4470,9 @@
         
         <div class="stats-mini">
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
-          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">19.14%</strong></span>
+          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">19.15%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">224645 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">224727 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -4485,10 +4485,10 @@
                 data-baseline="visual/desktop_webkit_baseline_control.png" 
                 data-diff="visual/desktop_webkit_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_variant_b_broken.png"
-                data-mismatch="19.14"
-                data-pixels="224645"
+                data-mismatch="19.15"
+                data-pixels="224727"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 19.14%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 19.15%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -4497,7 +4497,7 @@
                 data-diff="visual/desktop_webkit_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/desktop_webkit_candidate_candidate_variant_b_broken.png"
                 data-mismatch="19.56"
-                data-pixels="229547"
+                data-pixels="229628"
                 data-status="FAILED">
           VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 19.56%)</span>
         </button>
@@ -4516,7 +4516,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4533,7 +4533,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-desktop_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-desktop_webkit_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-desktop_webkit_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/desktop_webkit_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -4555,7 +4555,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-desktop_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-desktop_webkit_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-desktop_webkit_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4585,7 +4585,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-desktop_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-desktop_webkit_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4621,9 +4621,9 @@
         
         <div class="stats-mini">
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">control</strong></span>
-          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">8.53%</strong></span>
+          <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">8.54%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">67064 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">67165 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -4636,10 +4636,10 @@
                 data-baseline="visual/tablet_webkit_baseline_control.png" 
                 data-diff="visual/tablet_webkit_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_variant_b_broken.png"
-                data-mismatch="8.53"
-                data-pixels="67064"
+                data-mismatch="8.54"
+                data-pixels="67165"
                 data-status="FAILED">
-          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 8.53%)</span>
+          CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 8.54%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -4647,10 +4647,10 @@
                 data-baseline="visual/tablet_webkit_baseline_variant_a.png" 
                 data-diff="visual/tablet_webkit_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/tablet_webkit_candidate_candidate_variant_b_broken.png"
-                data-mismatch="9.08"
-                data-pixels="71396"
+                data-mismatch="9.09"
+                data-pixels="71497"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 9.08%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 9.09%)</span>
         </button>
       
         <button class="baseline-tab-btn " 
@@ -4667,7 +4667,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4684,7 +4684,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-tablet_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-tablet_webkit_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-tablet_webkit_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/tablet_webkit_baseline_control.png" class="swipe-base" alt="Baseline Base" />
@@ -4706,7 +4706,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-tablet_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-tablet_webkit_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-tablet_webkit_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4736,7 +4736,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-tablet_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-tablet_webkit_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4788,7 +4788,7 @@
                 data-diff="visual/mobile_webkit_candidate_candidate_variant_b_broken_diff_vs_control.png"
                 data-candidate="visual/mobile_webkit_candidate_candidate_variant_b_broken.png"
                 data-mismatch="22.53"
-                data-pixels="94611"
+                data-pixels="94641"
                 data-status="FAILED">
           CONTROL <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 22.53%)</span>
         </button>
@@ -4798,10 +4798,10 @@
                 data-baseline="visual/mobile_webkit_baseline_variant_a.png" 
                 data-diff="visual/mobile_webkit_candidate_candidate_variant_b_broken_diff_vs_variant_a.png"
                 data-candidate="visual/mobile_webkit_candidate_candidate_variant_b_broken.png"
-                data-mismatch="22.28"
-                data-pixels="93587"
+                data-mismatch="22.29"
+                data-pixels="93617"
                 data-status="FAILED">
-          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 22.28%)</span>
+          VARIANT_A <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 22.29%)</span>
         </button>
       
         <button class="baseline-tab-btn active" 
@@ -4818,7 +4818,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4835,7 +4835,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-mobile_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel active" id="panel-slider-mobile_webkit_candidate_variant_b_broken">
           <div class="swipe-container" id="swipe-container-mobile_webkit_candidate_variant_b_broken">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/mobile_webkit_baseline_variant_b.png" class="swipe-base" alt="Baseline Base" />
@@ -4857,7 +4857,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-mobile_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-toggle-mobile_webkit_candidate_variant_b_broken">
           <div class="toggle-viewer" id="toggle-viewer-mobile_webkit_candidate_variant_b_broken">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -4887,7 +4887,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-mobile_webkit_candidate_variant_b_broken">
+        <div class="visual-view-panel" id="panel-grid-mobile_webkit_candidate_variant_b_broken">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -4925,7 +4925,7 @@
           <span>Closest Baseline Match: <strong class="display-match-name" style="color:var(--accent-indigo);">figma_design_spec</strong></span>
           <span>Mismatch Ratio: <strong class="display-mismatch highlight-text">7.04%</strong></span>
           <span>Mismatch Threshold: <strong>1.0%</strong></span>
-          <span>Mismatched Pixels: <strong class="display-pixels text-danger">72040 px</strong></span>
+          <span>Mismatched Pixels: <strong class="display-pixels text-danger">72121 px</strong></span>
         </div>
 
         <!-- Baseline variations review panel -->
@@ -4939,7 +4939,7 @@
                 data-diff="visual/figma_vs_variant_diff.png"
                 data-candidate="visual/figma_vs_variant_variant.png"
                 data-mismatch="7.04"
-                data-pixels="72040"
+                data-pixels="72121"
                 data-status="FAILED">
           FIGMA_DESIGN_SPEC <span style="color: var(--color-crimson); font-weight:bold; margin-left:4px;">(✗ 7.04%)</span>
         </button>
@@ -4947,7 +4947,7 @@
           </div>
         </div>
 
-        <!-- Percy-style inspector workspace tabs -->
+        <!-- Visual regression inspector workspace tabs -->
         <div class="workspace-tabs-container" style="margin-top: 1rem;">
           <span class="tab-label">Visual Review Mode:</span>
           <div class="workspace-tabs">
@@ -4964,7 +4964,7 @@
         </div>
 
         <!-- 1. SPLIT SCREEN SWIPE SLIDER PANEL -->
-        <div class="percy-view-panel active" id="panel-slider-figma_vs_variant_chromium_Figma_Design_Spec_Match">
+        <div class="visual-view-panel active" id="panel-slider-figma_vs_variant_chromium_Figma_Design_Spec_Match">
           <div class="swipe-container" id="swipe-container-figma_vs_variant_chromium_Figma_Design_Spec_Match">
             <!-- Selected Baseline Image (Before) -->
             <img src="visual/figma_vs_variant_control.png" class="swipe-base" alt="Baseline Base" />
@@ -4986,7 +4986,7 @@
         </div>
 
         <!-- 2. INSTANT A/B TOGGLE PANEL -->
-        <div class="percy-view-panel" id="panel-toggle-figma_vs_variant_chromium_Figma_Design_Spec_Match">
+        <div class="visual-view-panel" id="panel-toggle-figma_vs_variant_chromium_Figma_Design_Spec_Match">
           <div class="toggle-viewer" id="toggle-viewer-figma_vs_variant_chromium_Figma_Design_Spec_Match">
             <div class="toggle-controls">
               <span class="toggle-filename-info">Select frame to inspect (or press <kbd>Space</kbd> / <kbd>Tab</kbd> to flash):</span>
@@ -5016,7 +5016,7 @@
         </div>
 
         <!-- 3. TRADITIONAL SIDE BY SIDE GRID PANEL -->
-        <div class="percy-view-panel" id="panel-grid-figma_vs_variant_chromium_Figma_Design_Spec_Match">
+        <div class="visual-view-panel" id="panel-grid-figma_vs_variant_chromium_Figma_Design_Spec_Match">
           <div class="image-grid">
             <div class="image-wrapper">
               <div class="img-label">BASELINE (BEFORE)</div>
@@ -5082,7 +5082,7 @@
           <td><pre class="code-payload">{
   "type": "pageview",
   "variant": "control",
-  "timestamp": "2026-06-13T12:46:33.559Z"
+  "timestamp": "2026-06-13T13:34:38.555Z"
 }</pre></td>
           <td><span class="badge badge-success">VERIFIED</span></td>
         </tr>
@@ -5102,7 +5102,7 @@
           <td><pre class="code-payload">{
   "type": "conversion",
   "variant": "control",
-  "timestamp": "2026-06-13T12:46:37.014Z",
+  "timestamp": "2026-06-13T13:34:41.986Z",
   "goal": "cta_click"
 }</pre></td>
           <td><span class="badge badge-success">VERIFIED</span></td>
@@ -5139,7 +5139,7 @@
           <td><pre class="code-payload">{
   "type": "pageview",
   "variant": "variant_a",
-  "timestamp": "2026-06-13T12:46:38.320Z"
+  "timestamp": "2026-06-13T13:34:43.398Z"
 }</pre></td>
           <td><span class="badge badge-success">VERIFIED</span></td>
         </tr>
@@ -5159,7 +5159,7 @@
           <td><pre class="code-payload">{
   "type": "conversion",
   "variant": "variant_a",
-  "timestamp": "2026-06-13T12:46:41.734Z",
+  "timestamp": "2026-06-13T13:34:46.849Z",
   "goal": "cta_click"
 }</pre></td>
           <td><span class="badge badge-success">VERIFIED</span></td>
@@ -5195,28 +5195,28 @@
         <div class="scenario-summary-grid">
           <div class="summary-metric">
             <span class="metric-label">Control Conversions</span>
-            <span class="metric-val">333 / 2500</span>
-            <span class="metric-sub">CR: <strong> 13.32%</strong></span>
+            <span class="metric-val">288 / 2500</span>
+            <span class="metric-sub">CR: <strong> 11.52%</strong></span>
           </div>
           
           <div class="summary-metric">
             <span class="metric-label">Variant Conversions</span>
-            <span class="metric-val">399 / 2500</span>
-            <span class="metric-sub">CR: <strong> 15.96%</strong></span>
+            <span class="metric-val">385 / 2500</span>
+            <span class="metric-sub">CR: <strong> 15.40%</strong></span>
           </div>
 
           <div class="summary-metric">
             <span class="metric-label">Relative Improvement</span>
             <span class="metric-val text-success">
-              +19.82%
+              +33.68%
             </span>
-            <span class="metric-sub">Z-Score: <strong>2.642</strong></span>
+            <span class="metric-sub">Z-Score: <strong>4.026</strong></span>
           </div>
 
           <div class="summary-metric">
             <span class="metric-label">Confidence & P-Value</span>
-            <span class="metric-val">99.18%</span>
-            <span class="metric-sub">p-value: <strong>0.00824</strong></span>
+            <span class="metric-val">99.99%</span>
+            <span class="metric-sub">p-value: <strong>0.00006</strong></span>
           </div>
         </div>
 
@@ -5224,7 +5224,7 @@
           <div class="alert-icon">⚡</div>
           <div class="alert-body">
             <h4>Automated Decision: <span class="badge badge-success">AUTO-PROMOTE & ROLL OUT (100% Traffic)</span></h4>
-            <p>Variant is a WINNER with 99.18% confidence! Roll out to 100% traffic.</p>
+            <p>Variant is a WINNER with 99.99% confidence! Roll out to 100% traffic.</p>
           </div>
         </div>
 
@@ -5240,14 +5240,14 @@
               <text x="141" y="20" fill="#f43f5e" font-size="10" font-weight="bold">Baseline (0% Lift)</text>
 
               <!-- CI line -->
-              <line x1="140.3624007790704" y1="40" x2="165.42959922092956" y2="40" stroke="#6366f1" stroke-width="3" />
+              <line x1="148.7424741498617" y1="40" x2="172.92152585013832" y2="40" stroke="#6366f1" stroke-width="3" />
               <!-- CI End Caps -->
-              <line x1="140.3624007790704" y1="30" x2="140.3624007790704" y2="50" stroke="#6366f1" stroke-width="3" />
-              <line x1="165.42959922092956" y1="30" x2="165.42959922092956" y2="50" stroke="#6366f1" stroke-width="3" />
+              <line x1="148.7424741498617" y1="30" x2="148.7424741498617" y2="50" stroke="#6366f1" stroke-width="3" />
+              <line x1="172.92152585013832" y1="30" x2="172.92152585013832" y2="50" stroke="#6366f1" stroke-width="3" />
               
               <!-- Point estimate -->
-              <circle cx="262.84684684684674" cy="40" r="7" fill="#10b981" stroke="#f8fafc" stroke-width="1.5" />
-              <text x="247.84684684684674" y="65" fill="#f8fafc" font-size="10" font-weight="bold">19.8% Lift</text>
+              <circle cx="351.5555555555556" cy="40" r="7" fill="#10b981" stroke="#f8fafc" stroke-width="1.5" />
+              <text x="336.5555555555556" y="65" fill="#f8fafc" font-size="10" font-weight="bold">33.7% Lift</text>
 
               <!-- Axis scales -->
               <text x="40" y="80" fill="#94a3b8" font-size="9">-15%</text>
@@ -5257,7 +5257,7 @@
             </svg>
             <div class="chart-legend">
               <span class="legend-item"><span class="dot baseline"></span>Baseline</span>
-              <span class="legend-item"><span class="dot range"></span>95% Confidence Interval [0.7%, 4.6%]</span>
+              <span class="legend-item"><span class="dot range"></span>95% Confidence Interval [2.0%, 5.8%]</span>
               <span class="legend-item"><span class="dot estimate"></span>Mean Lift</span>
             </div>
           </div>
@@ -5268,28 +5268,28 @@
         <div class="scenario-summary-grid">
           <div class="summary-metric">
             <span class="metric-label">Control Conversions</span>
-            <span class="metric-val">295 / 2500</span>
-            <span class="metric-sub">CR: <strong> 11.80%</strong></span>
+            <span class="metric-val">308 / 2500</span>
+            <span class="metric-sub">CR: <strong> 12.32%</strong></span>
           </div>
           
           <div class="summary-metric">
             <span class="metric-label">Variant Conversions</span>
-            <span class="metric-val">231 / 2500</span>
-            <span class="metric-sub">CR: <strong> 9.24%</strong></span>
+            <span class="metric-val">188 / 2500</span>
+            <span class="metric-sub">CR: <strong> 7.52%</strong></span>
           </div>
 
           <div class="summary-metric">
             <span class="metric-label">Relative Improvement</span>
             <span class="metric-val text-danger">
-              -21.69%
+              -38.96%
             </span>
-            <span class="metric-sub">Z-Score: <strong>-2.953</strong></span>
+            <span class="metric-sub">Z-Score: <strong>-5.695</strong></span>
           </div>
 
           <div class="summary-metric">
             <span class="metric-label">Confidence & P-Value</span>
-            <span class="metric-val">99.68%</span>
-            <span class="metric-sub">p-value: <strong>0.00315</strong></span>
+            <span class="metric-val">100.00%</span>
+            <span class="metric-sub">p-value: <strong>0.00000</strong></span>
           </div>
         </div>
 
@@ -5297,7 +5297,7 @@
           <div class="alert-icon">⚡</div>
           <div class="alert-body">
             <h4>Automated Decision: <span class="badge badge-danger">AUTO-HALT & SHIELD USER TRAFFIC</span></h4>
-            <p>Variant is a LOSER with 99.68% confidence. Halt the experiment to protect conversion.</p>
+            <p>Variant is a LOSER with 100.00% confidence. Halt the experiment to protect conversion.</p>
           </div>
         </div>
 
@@ -5313,14 +5313,14 @@
               <text x="141" y="20" fill="#f43f5e" font-size="10" font-weight="bold">Baseline (0% Lift)</text>
 
               <!-- CI line -->
-              <line x1="108.73988931420195" y1="40" x2="130.49211068579805" y2="40" stroke="#6366f1" stroke-width="3" />
+              <line x1="94.70825139134118" y1="40" x2="115.85174860865882" y2="40" stroke="#6366f1" stroke-width="3" />
               <!-- CI End Caps -->
-              <line x1="108.73988931420195" y1="30" x2="108.73988931420195" y2="50" stroke="#6366f1" stroke-width="3" />
-              <line x1="130.49211068579805" y1="30" x2="130.49211068579805" y2="50" stroke="#6366f1" stroke-width="3" />
+              <line x1="94.70825139134118" y1="30" x2="94.70825139134118" y2="50" stroke="#6366f1" stroke-width="3" />
+              <line x1="115.85174860865882" y1="30" x2="115.85174860865882" y2="50" stroke="#6366f1" stroke-width="3" />
               
               <!-- Point estimate -->
               <circle cx="40" cy="40" r="7" fill="#10b981" stroke="#f8fafc" stroke-width="1.5" />
-              <text x="25" y="65" fill="#f8fafc" font-size="10" font-weight="bold">-21.7% Lift</text>
+              <text x="25" y="65" fill="#f8fafc" font-size="10" font-weight="bold">-39.0% Lift</text>
 
               <!-- Axis scales -->
               <text x="40" y="80" fill="#94a3b8" font-size="9">-15%</text>
@@ -5330,7 +5330,7 @@
             </svg>
             <div class="chart-legend">
               <span class="legend-item"><span class="dot baseline"></span>Baseline</span>
-              <span class="legend-item"><span class="dot range"></span>95% Confidence Interval [-4.3%, -0.9%]</span>
+              <span class="legend-item"><span class="dot range"></span>95% Confidence Interval [-6.5%, -3.1%]</span>
               <span class="legend-item"><span class="dot estimate"></span>Mean Lift</span>
             </div>
           </div>
@@ -5436,7 +5436,7 @@
       btn.classList.add('active');
       
       // Hide all panels in this card
-      parentCard.querySelectorAll('.percy-view-panel').forEach(panel => {
+      parentCard.querySelectorAll('.visual-view-panel').forEach(panel => {
         panel.classList.remove('active');
       });
       
@@ -5560,7 +5560,7 @@
     document.addEventListener('keydown', (e) => {
       // Toggle mode quick toggling
       if (e.key === ' ' || e.key === 'Tab') {
-        const activePanel = document.querySelector('.percy-view-panel.active[id^="panel-toggle-"]');
+        const activePanel = document.querySelector('.visual-view-panel.active[id^="panel-toggle-"]');
         if (activePanel) {
           e.preventDefault();
           const buttons = Array.from(activePanel.querySelectorAll('.toggle-btn'));

@@ -1,6 +1,6 @@
 # A/B Test Verification & Visual Regression Audit Suite
 
-An offline-first, private developer-centric verification suite for A/B testing and layout validation. This runner automates **Percy-style visual regression diffing**, **Figma design spec matching**, **telemetry analytics event tracing**, and **statistical cohort simulation** in a single unified pipeline. 
+An offline-first, private developer-centric verification suite for A/B testing and layout validation. This runner automates **local visual regression diffing**, **Figma design spec matching**, **telemetry analytics event tracing**, and **statistical cohort simulation** in a single unified pipeline. 
 
 Powered locally and natively by **Playwright**, **Pixelmatch**, and **Express**.
 
