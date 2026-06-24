@@ -41,7 +41,11 @@ async function main() {
         fs.copyFileSync(designRef.path, figmaControlPath);
 
         // Copy desktop variant screenshot to variant path representation
-        const desktopVariantPath = path.join(process.cwd(), 'reports', 'visual', 'desktop_chromium_candidate_candidate_variant_a.png');
+        const variantName = config.variants && config.variants.variant ? (config.variants.variant.name || 'variant') : 'variant';
+        const defaultViewport = config.visual && config.visual.viewports && config.visual.viewports[0] ? config.visual.viewports[0].name : 'desktop';
+        const defaultBrowser = config.visual && config.visual.browsers && config.visual.browsers[0] ? config.visual.browsers[0] : 'chromium';
+        const desktopVariantFileName = `${defaultViewport}_${defaultBrowser}_candidate_${variantName}.png`;
+        const desktopVariantPath = path.join(process.cwd(), 'reports', 'visual', desktopVariantFileName);
         if (fs.existsSync(desktopVariantPath)) {
           fs.copyFileSync(desktopVariantPath, figmaVariantPath);
 
@@ -74,7 +78,7 @@ async function main() {
             }
           });
         } else {
-          console.warn(`[Figma Warning] Could not locate desktop_candidate_candidate_variant_a.png to compare against Figma Design.`);
+          console.warn(`[Figma Warning] Could not locate ${desktopVariantFileName} to compare against Figma Design.`);
         }
       }
     }

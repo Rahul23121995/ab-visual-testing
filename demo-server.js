@@ -28,17 +28,13 @@ app.get('/', (req, res) => {
   
   if (!variant) {
     // Auto-allocate across valid variations if not specified
-    const variantsList = ['control', 'variant_a', 'variant_b'];
+    const variantsList = ['control', 'variant'];
     variant = variantsList[Math.floor(Math.random() * variantsList.length)];
     res.setHeader('Set-Cookie', `ab_variant=${variant}; Path=/; Max-Age=900000`);
   }
 
-  if (variant === 'variant_a') {
+  if (variant === 'variant') {
     res.sendFile(path.join(__dirname, 'demo-app/public/variant.html'));
-  } else if (variant === 'variant_b') {
-    res.sendFile(path.join(__dirname, 'demo-app/public/variant_b.html'));
-  } else if (variant === 'variant_b_broken') {
-    res.sendFile(path.join(__dirname, 'demo-app/public/variant_b_broken.html'));
   } else {
     res.sendFile(path.join(__dirname, 'demo-app/public/control.html'));
   }

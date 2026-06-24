@@ -53,7 +53,11 @@ export async function getFigmaDesignReference(config) {
   }
 
   // Fallback: If no figma config or no token, copy Control page screenshot or create a dummy to compare code vs spec
-  const controlPath = path.join(outputDir, 'desktop_control.png');
+  const controlName = config.variants && config.variants.control ? (config.variants.control.name || 'control') : 'control';
+  const defaultViewport = config.visual && config.visual.viewports && config.visual.viewports[0] ? config.visual.viewports[0].name : 'desktop';
+  const defaultBrowser = config.visual && config.visual.browsers && config.visual.browsers[0] ? config.visual.browsers[0] : 'chromium';
+  const controlFileName = `${defaultViewport}_${defaultBrowser}_baseline_${controlName}.png`;
+  const controlPath = path.join(outputDir, controlFileName);
   if (fs.existsSync(controlPath)) {
     // We create a mock "Figma Spec" copy by just using the control screenshot. 
     // This allows the diff engine to run Figma-vs-Variant comparisons!

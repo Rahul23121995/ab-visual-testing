@@ -89,6 +89,32 @@ export async function runVisualRegression(config) {
   
   const results = [];
   const { targetUrl, visual, baselines, candidates } = config;
+  
+  let baselinesList = baselines;
+  if (!baselinesList || !Array.isArray(baselinesList)) {
+    if (config.variants && config.variants.control) {
+      baselinesList = [{
+        name: config.variants.control.name || 'control',
+        url: config.variants.control.url || targetUrl,
+        cookie: config.variants.control.cookie
+      }];
+    } else {
+      baselinesList = [];
+    }
+  }
+
+  let candidatesList = candidates;
+  if (!candidatesList || !Array.isArray(candidatesList)) {
+    if (config.variants && config.variants.variant) {
+      candidatesList = [{
+        name: config.variants.variant.name || 'variant',
+        url: config.variants.variant.url || targetUrl,
+        cookie: config.variants.variant.cookie
+      }];
+    } else {
+      candidatesList = [];
+    }
+  }
   const viewports = visual.viewports || [{ width: 1280, height: 800, name: 'desktop' }];
   const browsers = visual.browsers || ['chromium'];
   const maxAllowed = visual.mismatchThreshold || 0.05;
@@ -120,7 +146,7 @@ export async function runVisualRegression(config) {
 
     try {
       // 1. Capture All Baselines
-      for (const b of baselines) {
+      for (const b of baselinesList) {
         console.log(`[Visual] [${browserName}] Pre-capturing Baseline variant: "${b.name}"`);
         const bUrl = b.url || targetUrl;
         const bDomain = new URL(bUrl).hostname;
@@ -154,7 +180,7 @@ export async function runVisualRegression(config) {
       }
 
       // 2. Capture All Candidates & Run Multi-Comparison
-      for (const c of candidates) {
+      for (const c of candidatesList) {
         console.log(`[Visual] [${browserName}] Capturing Candidate under test: "${c.name}"`);
         const cUrl = c.url || targetUrl;
         const cDomain = new URL(cUrl).hostname;
@@ -189,7 +215,7 @@ export async function runVisualRegression(config) {
           let bestComp = null;
           let bestBaseline = null;
 
-          for (const b of baselines) {
+          for (const b of baselinesList) {
             const baselinePath = path.join(outputDir, `${viewport.name}_${browserName}_baseline_${b.name}.png`);
             const diffPath = path.join(outputDir, `${viewport.name}_${browserName}_candidate_${c.name}_diff_vs_${b.name}.png`);
 

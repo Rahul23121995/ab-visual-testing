@@ -1,63 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaaS Premium Checkout (Control)</title>
+  <title>Norwegian Flight Search (Control)</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="flight-portal-theme">
+  <div class="header-nav">
+    <div class="logo">
+      <span class="red-brand">norwegian</span><span class="dot-brand">.no</span>
+    </div>
+    <div class="nav-links">
+      <span class="nav-item active">Bestill</span>
+      <span class="nav-item">Mine reiser</span>
+      <span class="nav-item">Hjelp</span>
+    </div>
+  </div>
+
   <div class="container">
-    <div class="checkout-card control-theme">
-      <div class="header">
-        <h1>Control Premium</h1>
-        <p>Start your A/B test automation journey today</p>
+    <div class="search-card control-style">
+      <div class="search-header">
+        <h1>Finn og bestill flyreiser</h1>
+        <p>Utforsk destinasjoner og bestill din neste reise</p>
       </div>
 
-      <div class="product-info">
-        <div class="product-name">
-          <h3>Growth Plan</h3>
-          <p>Unlimited automation, statistical engines, visual diffs</p>
-        </div>
-        <div class="product-price">$29/mo</div>
+      <div class="trip-type-selector">
+        <button class="trip-type-btn active">Tur/retur</button>
+        <button class="trip-type-btn">En vei</button>
+        <button class="trip-type-btn">Flere byer</button>
       </div>
 
-      <div class="features-list">
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <span>Multi-baseline visual comparison</span>
+      <div class="search-widget">
+        <!-- Origin -->
+        <div class="input-field">
+          <label for="origin-input-placeholder">Fra</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🛫</span>
+            <input type="text" id="origin-input-placeholder" value="Oslo (OSL)" placeholder="Flyplass eller by..." />
+          </div>
         </div>
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <span>Automatic event and goal validation</span>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <span>Z-test proportions statistical engine</span>
-        </div>
-      </div>
 
-      <div class="input-group" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
-        <label for="username-input-placeholder" style="font-size: 0.85rem; color: var(--text-secondary);">Username</label>
-        <input type="text" id="username-input-placeholder" placeholder="Enter username..." style="padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color); background: #0f172a; color: var(--text-primary); outline: none;" />
-        <label for="password-input-placeholder" style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Password</label>
-        <input type="password" id="password-input-placeholder" placeholder="Enter password..." style="padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color); background: #0f172a; color: var(--text-primary); outline: none;" />
-      </div>
+        <!-- Destination -->
+        <div class="input-field">
+          <label for="destination-input-placeholder">Til</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🛬</span>
+            <input type="text" id="destination-input-placeholder" placeholder="Velg destinasjon..." />
+          </div>
+        </div>
 
-      <div class="cta-button-container">
-        <button class="cta-button">Subscribe to Growth Plan</button>
+        <!-- Dates -->
+        <div class="input-field double">
+          <div>
+            <label>Utreise</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📅</span>
+              <input type="text" value="28. Jun 2026" readonly />
+            </div>
+          </div>
+          <div>
+            <label>Hjemreise</label>
+            <div class="input-wrapper">
+              <span class="input-icon">📅</span>
+              <input type="text" value="05. Jul 2026" readonly />
+            </div>
+          </div>
+        </div>
+
+        <!-- Passengers -->
+        <div class="input-field">
+          <label>Reisende</label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="text" value="1 voksen, økonomi" readonly />
+          </div>
+        </div>
+
+        <!-- Search button container -->
+        <div class="cta-button-container">
+          <button class="cta-button">Søk og bestill</button>
+        </div>
       </div>
 
       <div class="footer-text">
-        Variant: CONTROL • Secured Checkout
+        Variant: CONTROL • Offisiell søkekanal
       </div>
     </div>
   </div>
-  
+
   <script src="tracking.js"></script>
 </body>
 </html>
