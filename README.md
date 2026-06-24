@@ -124,21 +124,27 @@ To target your own website or any external project, you only need to update the 
 
 ## 🚀 Getting Started
 
-### 1. Install Dependencies
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Rahul23121995/ab-visual-testing.git
+cd ab-visual-testing
+```
+
+### 2. Install Dependencies
 Install the node packages and fetch Playwright's local browser binaries:
 ```bash
 npm install
 npx playwright install
 ```
 
-### 2. Start the Target Application (Mock Demo Server)
+### 3. Start the Target Application (Mock Demo Server)
 Run the flight booking application server in the background (or target your own active application port):
 ```bash
 npm start
 ```
 *The mock application server will launch at `http://localhost:3000` representing the Norwegian.com inspired flight search widget.*
 
-### 3. Run the Verification Audit Suite
+### 4. Run the Verification Audit Suite
 In a new terminal window, execute the verifier runner:
 ```bash
 npm run verify
