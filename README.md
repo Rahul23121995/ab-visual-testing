@@ -194,6 +194,30 @@ Once the test run completes, you will find generated visual screenshots and comp
 * **Static Print Copy**: `reports/ab-experiment-report.pdf`
 * **Visual Screenshot Captures**: `reports/visual/`
 
+#### 💡 Visual Regression Inspection & Troubleshooting Tips
+
+When a test run fails due to visual mismatches (highlighted in red in the diff), here is how developers can quickly identify and fix the underlying style changes (like typography, colors, padding, etc.):
+
+1. **Spot Layout Shifts in "Flash Toggle" Mode:**
+   - In the interactive HTML report, select the failing test card and switch to the **🔄 Flash Toggle** workspace.
+   - Click back and forth between **Before (Baseline)** and **After (Candidate)** (or press `Space` / `Tab`).
+   - If text or boxes jump up, down, or sideways, look for mismatches in vertical alignment, margins, line-height, or padding.
+   - If the text changes thickness but doesn't move, it is likely a `font-weight` difference.
+
+2. **Differentiate Spacing vs. Typography Mismatches:**
+   - Look at the red highlights in the **Pixel Diff** view.
+   - **Text-only red spots:** Suggests font family fallback issues, font-size, letter-spacing, or line-height.
+   - **Container-wide red outlines:** Suggests container sizing, flex gap, padding, or margins are off.
+
+3. **Inspect with Browser DevTools:**
+   - Run the local application (`npm start`).
+   - Open your browser's Developer Tools (F12) and inspect the target elements.
+   - Toggle the experiment variant cookie (`ab_variant=control` vs `ab_variant=variant`) to see how Computed Styles change dynamically in the **Computed** tab.
+
+4. **Compare against Figma Specifications:**
+   - If testing against Figma, select the frame in your Figma file and open the **Dev Mode** panel to inspect CSS specifications.
+   - Match the Figma values (`font-family`, `font-size`, color hex, flex gap, padding) directly with your local CSS code.
+
 ---
 
 ## 📂 Project Structure
