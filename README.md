@@ -106,12 +106,51 @@ To target your own website or any external project, you only need to update the 
 | Configuration Block | Parameter | What to Update / Purpose |
 | :--- | :--- | :--- |
 | **Global** | `targetUrl` | Set this to the main website domain under test (e.g., `https://www.yourwebsite.com`). |
-| **Figma Matching** | `figma` | **To Disable**: Remove this block or set `"figma": null`. <br>**To Enable**: Provide your Figma Personal Access Token, File Key, and Frame Node ID to automatically pull design specs and compare against coded variations. |
+| **Figma Matching** | `figma` | **To Disable**: Remove this block or set `"figma": null`. <br>**To Enable**: Provide your Figma Personal Access Token, File Key, and Frame Node ID to automatically pull design specs and compare against coded variations. See the [Figma Integration Guide](#figma-integration-guide) below for details. |
 | **Session Cookies** | `sessionCookies` | If your site requires authentication, pass the session token name, value, and domain here so the automated runner bypasses login screens. |
 | **Variants Definition** | `variants` | Maps the two comparison buckets. Update: <ul><li>`url`: The specific variant URL.</li><li>`cookie.name`: The cookie your site checks to bucket visitors (e.g., `experiment_bucket`).</li><li>`cookie.value`: The value assigning user to Control vs Variant (e.g., `A` vs `B`).</li></ul> |
 | **Visual Regression**| `visual` | Customize the test coverage: <ul><li>`browsers`: Choose which engines to test (options: `chromium`, `firefox`, `webkit`).</li><li>`viewports`: Define testing viewport sizes.</li><li>`selectors`: Pass CSS selectors of specific widgets (e.g., `.search-card`) to snapshot them individually instead of doing a full-page check.</li><li>`mismatchThreshold`: Visual pixel divergence tolerance. `0.01` means 1% change is allowed; raise this (e.g., `0.05`) for pages with high dynamic content.</li></ul> |
 | **Telemetry Tracing**| `tracing` | Automates the user flow and validates analytics: <ul><li>`action`: Actions to perform (`navigate`, `type`, `click`).</li><li>`selector`: CSS selectors of form fields and CTA buttons on the new site.</li><li>`value`: The text values to type into inputs.</li><li>`expectedTelemetry.urlPattern`: The network address/endpoint of your analytics collector (e.g., `/collect`, `/api/log`, `google-analytics.com`).</li><li>`expectedTelemetry.payload`: The exact key-value JSON parameters your page reports to the analytics collector to verify tracking works.</li></ul> |
 | **Cohort Simulation**| `simulation` | Controls the mathematical Z-Test calculations for reports. Customize `scenarios` and rates (`controlTrueRate` / `variantTrueRate`) based on conversion metrics to verify when a Variant gets flagged as a Winner, Loser, or Inconclusive. |
+
+---
+
+### Figma Integration Guide
+
+To automatically sync and compare your live web pages with your Figma design mocks, you will need to configure the `figma` block in `ab-config.json` with three parameters: `fileKey`, `nodeId`, and `token`.
+
+#### 🔍 How to Extract Credentials from a Figma URL
+
+Consider a typical Figma URL when you have a frame selected:
+```
+https://www.figma.com/design/XM8j1234abcd5678/My-Project-Designs?node-id=402-1249&t=ab12cd34...
+```
+
+1. **File Key (`fileKey`)**
+   - **Where to find it:** It is the unique alphanumeric segment after `/design/` (or `/file/`) and before the file name.
+   - **Example:** In the URL above, the `fileKey` is `XM8j1234abcd5678`.
+
+2. **Node ID (`nodeId`)**
+   - **Where to find it:** Look for the `node-id` query parameter in the URL when you select a specific frame or element.
+   - **Important Formatting:** Figma URLs encode the colon (`:`) in Node IDs as a hyphen (`-`) (e.g., `node-id=402-1249`). However, the Figma API requires the original colon (`:`) format.
+   - **Translation:** Replace the hyphen (`-`) with a colon (`:`).
+   - **Example:** If the URL query parameter is `node-id=402-1249`, the value to use in `ab-config.json` is `402:1249`.
+
+> [!TIP]
+> Always select the parent frame of your component or page in Figma to get the exact Node ID representing the design spec you want to compare.
+
+#### 🔑 How to Generate a Figma Personal Access Token (PAT)
+
+1. Log in to your **Figma** account.
+2. Click your profile avatar in the top-left (or top-right) corner of the Figma dashboard.
+3. Select **Settings** (or **Personal Settings**).
+4. Go to the **Account** tab and scroll down to the **Personal access tokens** section.
+5. Enter a description for your token (e.g., `AB-Test-Verification-Suite`) and press **Enter** (or click **Generate token**).
+6. Select the necessary scopes. For this verification suite:
+   - **File content**: Select **Read** permission.
+7. Click **Generate token**.
+8. **Copy the token** immediately and save it securely. *Figma will not show this token again.*
+9. Add the token to `ab-config.json` as the `token` parameter, or set it as an environment variable `FIGMA_TOKEN` to avoid storing secrets in configuration files.
 
 ---
 
